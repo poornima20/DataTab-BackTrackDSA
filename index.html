@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>BackTrack DSA - DataTab</title>
+</head>
+<body>
+
+  <section class="landing">
+    <img src="https://img.icons8.com/ios/50/refresh--v1.png" alt="Brain Icon" class="landing-icon" />
+    <h1 class="title">BackTrackDSA</h1>
+    <p class="tagline">Break down tough problems into easier ones, step by step.</p>
+
+    <div class="steps">
+      <div class="step">
+        <img src="https://img.icons8.com/ios/50/search--v1.png" class="step-icon" />
+        <p class="step-text">Enter a DSA problem above and click <span class="highlight-blue">Ask</span></p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios/50/open-book--v1.png" class="step-icon" />
+        <p class="step-text">Read the step-wise breakdown generated</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios/50/light-on--v1.png" class="step-icon" />
+        <p class="step-text">Use <span class="highlight-green">I understand this</span> or <span class="highlight-orange">Simplify</span> to continue</p>
+      </div>
+    </div>
+
+    <button class="scroll-btn" onclick="scrollToNext()">Get Started &#129031;</button>
+  </section>
+
+  <section id="next" class="next-section">
+
+    <div class="container">   
+
+        <div class="ask-box card">
+          <h3>&#9998; Ask a DSA Question to Solve</h3>
+          <div class="input-group">
+            <input type="text" id="questionInput" placeholder="Enter your DSA question or problem statement...">
+            <button class="btn-primary" id="askBtn">Ask</button>
+          </div>
+        </div>
+
+    </div>
+    
+
+    
+    
+    <div class="History">  
+
+       <div class="history-header">
+        <h2>Question History &#8634; </h2>
+        <button class="reset-btn" id="resetBtn">Reset &#x1F5D1;</button>
+      </div>
+
+      <div id="questionTimeline">
+        <!-- Timeline items will be added here dynamically -->
+      </div>
+
+    </div>
+
+    <footer class="footer">
+  <p>© 2025 Fullmoon</p>
+</footer>
+
+  </section>
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>

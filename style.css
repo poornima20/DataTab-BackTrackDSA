@@ -1,0 +1,484 @@
+/* --- Global Reset Tweak --- */
+    * {
+      background-color: white;
+      box-sizing: border-box;
+    }
+
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafa;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    .landing {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .landing-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-family: 'Georgia', serif;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #121212;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #555;
+      margin: 10px 0 40px;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .step {
+      flex: 1 1 250px;
+      max-width: 280px;
+      padding: 20px;
+    }
+
+    .step-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 12px;
+    }
+
+    .step-text {
+      font-size: 1rem;
+      color: #111;
+    }
+
+    .highlight-blue { color: #2663ff; }
+    .highlight-green { color: #2eaf5c; }
+    .highlight-orange { color: #f39c12; }
+
+    /*Down Scroll*/
+    .scroll-btn {
+      margin-top: 50px;
+      padding: 10px 24px;
+      font-size: 1rem;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      align-items: center;
+    }
+
+    .scroll-btn:hover {
+      background-color: #f9fafa;
+      color: black;
+      
+    }
+
+
+    .next-section {
+      height: 100vh;
+      background-color: #fff;
+      padding: 50px;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: auto auto;
+      padding: 2rem; 
+      text-align: center;    
+    }
+
+    /*ASK Box CSS*/
+    .ask-box {
+      margin-bottom: 2rem;
+      max-width: 850px; /* Same as your container max-width */
+    }
+
+    .card {
+      background-color: rgb(255, 255, 255);
+      border-radius: 0.75rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 2px solid #e0e0e0; 
+      transition: box-shadow 0.2s ease;
+      margin: auto auto;      
+
+    }
+
+    h3{
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #000000;
+        margin-bottom: 1rem;
+        text-align: center;
+    } 
+
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    input {
+      flex: 1;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem 1.2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background-color: black;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+
+
+
+    /* Question history and reset*/
+
+.History {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  margin: 32px auto;
+  max-width: 850px;
+  border: 2px solid #e0e0e0; 
+  transition: box-shadow 0.2s ease;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.history-header h2 {
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.reset-btn {
+  font-size: 0.85rem;  
+  padding: 6px 10px;
+  color: #666;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  color: rgb(88, 61, 61);
+}
+
+
+/*timeline*/
+
+#questionTimeline{
+  margin-top: 42px;
+}
+.timeline-group {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.group-header {
+  background-color: #f9fafb;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9fafb;
+  letter-spacing: 0.5px;
+}
+
+.progress-info {
+  background-color: #fef3c7;
+  color: #92400e;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 15px;
+  margin-left: 18px;
+  border-radius: 9999px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #777777;
+  transition: transform 0.2s ease;
+}
+
+.timeline-group.expanded .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.group-content {
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-group.expanded .group-content {
+  max-height: 2000px;
+
+}
+
+.timeline-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+}
+
+.timeline-item.completed {
+  border-left: 4px solid #36b07b;
+
+}
+
+.timeline-item.active {
+  border-left: 4px solid #4672ac;
+}
+
+@keyframes dropIn {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.timeline-item.new-item {
+  animation: dropIn 0.6s ease-out;
+}
+
+.question-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.question-title {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.question-desc {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: #334155;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+
+.simplified-prefix{
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+
+/*.simplified-prefix::after {
+  content: 'Simplified';
+  background-color: #dbeafe;
+  color: #6286ff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-left: 10px;
+}*/
+
+
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  line-height: 1;
+  letter-spacing: 0.5px;
+
+}
+
+/* Understand Button */
+.btn-understand {
+  background-color: #f3f4f6;
+  color: #375f89;
+}
+
+.btn-understand.understood {
+  background-color: #d1fae5;
+  color: #2c7857;
+}
+
+.btn-understand:hover:not(.understood) {
+  background-color: #e2e8f0;
+}
+
+/* Simplify Button */
+.btn-simplify {
+  background-color: #ffedd5;
+  color: #c24821;
+}
+
+.btn-simplify.simplifying {
+  background-color: #dbeafe;
+  color: #4181e4;
+ 
+}
+
+.btn-regenerate{
+  background-color: #dbeafe;
+  color: #4181e4;
+}
+
+.footer {
+    text-align: center;
+    color: #666;
+    padding-top: 3rem;
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
+.empty-state{
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  
+}
+
+
+.group-header-content{
+   display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #f9fafb;
+}
+  .delete-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: #797979;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0 5px;
+  }
+  
+  .delete-btn:hover {
+    color: #000000;
+  }
+  
+
+
+  /* Base mobile styles (stacked vertically) */
+@media (max-width: 767px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  input, 
+  .btn-primary {
+    width: 100%; /* Full width on mobile */
+  }
+  
+  button {
+    padding: 0.8rem; /* Slightly adjust padding */
+  }
+}
+
+/* Tablet and desktop styles (horizontal layout) */
+@media (min-width: 768px) {
+  .input-group {
+    flex-direction: row;
+  }
+  
+  input {
+    flex: 1; /* Input takes remaining space */
+    min-width: 200px; /* Minimum width for input */
+  }
+  
+  .btn-primary {
+    width: auto; /* Auto width for button */
+    min-width: 100px; /* Minimum width for button */
+  }
+}
+
+
+
+/* Extra small devices adjustments */
+@media (max-width: 480px) {
+  input, 
+  button {
+    padding: 0.7rem 1rem; /* Slightly smaller padding */
+    font-size: 0.9rem; /* Slightly smaller font */
+  }
+}
