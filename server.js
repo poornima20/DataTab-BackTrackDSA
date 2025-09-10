@@ -36,10 +36,10 @@ async function callGroqAPI(prompt, systemMessage = null) {
       'Authorization': `Bearer ${GROQ_API_KEY}`
     },
     body: JSON.stringify({
-      model: 'llama3-8b-8192', // You can change this to other Groq supported models
+      model: 'llama-3.1-8b-instant', // You can change this to other Groq supported models
       messages: messages,
       temperature: 0.3,
-      max_tokens: 150
+      max_tokens: 300
     })
   });
 
